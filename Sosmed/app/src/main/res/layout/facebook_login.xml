@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#0099cc"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay" android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+
+
+        </LinearLayout>
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="20px"
+                android:layout_marginTop="20px"
+                android:layout_weight="1"
+                android:layout_gravity="center|top"
+                android:text="Facebook Login"
+                android:textSize="30dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:paddingBottom="10px"
+                android:paddingLeft="10px"
+                android:paddingRight="5px"
+                android:paddingTop="20px"
+                android:text="Username"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="left|top"
+                android:layout_marginTop="110dp">
+            </TextView>
+
+            <EditText
+                android:id="@+id/txtUser"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:layout_marginTop="110dp"
+                android:layout_gravity="center_horizontal|top">
+            </EditText>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:paddingBottom="10px"
+                android:paddingLeft="10px"
+                android:paddingRight="5px"
+                android:paddingTop="20px"
+                android:text="Password"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="left|center_vertical">
+            </TextView>
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:ems="10"
+                android:password="true"
+                android:layout_gravity="center">
+
+                <requestFocus />
+            </EditText>
+
+
+
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="80dp">
+            </Button>
+
+            <Button
+                android:id="@+id/Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="30dp">
+            </Button>
+
+    </FrameLayout>
+
+</FrameLayout>
